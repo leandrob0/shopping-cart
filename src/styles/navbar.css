@@ -28,10 +28,6 @@
     transform: translateY(-5px);
 }
 
-.list-container {
-    width: 300px;
-}
-
 #nav-list {
     margin: 0;
     padding: 5px;
@@ -46,9 +42,66 @@
 ul#nav-list a.nav-item {
     text-decoration: none;
     transition: ease-in-out 0.2s;
+
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 ul#nav-list a.nav-item:hover {
-    transform: translateY(-5px);
+    transform: scale(1.1);
     cursor: pointer;
+}
+
+.cart-container {
+    position: relative;
+
+    background-color: rgb(202, 62, 62);
+    border-radius: 50%;
+
+    margin-right: 20px;
+    margin-left: 2em;
+}
+
+.cart-image {
+    width: 40px;
+    height: 40px;
+
+    padding: 5px;
+}
+
+.cart-counter {
+    position: absolute;
+    bottom: -5px;
+    left: -5px;
+    color: black;
+    font-weight: 800;
+
+    text-align: center;
+
+    width: 25px;
+    height: 25px;
+    
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.animate { 
+    animation: appear ease-in 1s;
+}
+
+/*
+use this class when the user adds an item to the cart.
+Set a timeout to remove it or remove it before using.
+*/
+@keyframes appear {
+    0% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

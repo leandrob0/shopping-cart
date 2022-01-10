@@ -12,7 +12,7 @@
 .items-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
-  grid-gap: 10px;
+  grid-gap: 20px;
   justify-content: center;
   align-items: center;
 
@@ -20,8 +20,12 @@
 }
 
 .item {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
+
+  border: 2px solid black;
+  box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 0.2);
+  margin: 5px;
 }
 
 .item-image {
@@ -31,13 +35,33 @@
   height: 300px;
 }
 
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .item-name {
-    text-align: center;
-    position: absolute;
-    bottom: 0;
+  text-align: center;
 
-    width: 100%;
-    height: 50px;
+  border-top: 1px solid black;
+  padding: 10px;
+  margin: 0;
 
-    border: 1px solid black;
+  font-weight: 700;
+}
+
+.add-to-cart {
+  text-decoration: none;
+  font-weight: 700;
+  height: 3em;
+
+  background-color: rgb(202, 62, 62);
+  border: 0;
+
+  transition: background-color .5s;
+}
+
+.add-to-cart:hover {
+  cursor: pointer;
+  background-color: rgb(245, 94, 94);
 }

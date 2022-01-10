@@ -1,14 +1,12 @@
 import "../styles/homepage.css";
 import { Link } from "react-router-dom";
-import Nav from "./Navbar";
 
-const Homepage = () => {
+const Homepage = ({ colorBlack }) => {
 
   return (
     <>
-      <Nav color="white"/> 
       <div className="homepage-background">
-        <Link to="/shop">
+        <Link to="/shop" onClick={colorBlack}>
           <button type="button" className="button-catalog">
             View catalog
           </button>
