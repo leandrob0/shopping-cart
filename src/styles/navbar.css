@@ -20,6 +20,7 @@
     height: 100px;
 
     transition: ease-in-out 0.2s;
+    padding-left: 20px;
 }
 
 .shoe-logo:hover {
@@ -31,13 +32,23 @@
     width: 300px;
 }
 
-.list {
+#nav-list {
     margin: 0;
     padding: 5px;
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 
     list-style: none;
+}
+
+ul#nav-list a.nav-item {
+    text-decoration: none;
+    transition: ease-in-out 0.2s;
+}
+
+ul#nav-list a.nav-item:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
 }
