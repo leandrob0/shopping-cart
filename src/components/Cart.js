@@ -1,13 +1,18 @@
-import cart from '../media/cart.png'
+import SingleItemCart from "./SingleItemCar";
+import '../styles/cart.css'
 
-const Cart = ({ counter }) => {
-
-    return(
-        <div className='cart-container'>
-            <img alt='cart' src={cart} className='cart-image'/>
-            <div className='cart-counter'>{counter}</div>
+const Cart = ({ cart }) => {
+  return (
+    <div className="visual-cart">
+        <div className="cart-container">
+            {
+                cart.map(val => {
+                    return <SingleItemCart key={val.id} src={val.src} name={val.name} price={val.price}/>
+                })
+            }
         </div>
-    )
-}
+    </div>
+  );
+};
 
 export default Cart;

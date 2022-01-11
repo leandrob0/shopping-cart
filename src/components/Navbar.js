@@ -1,9 +1,9 @@
 import "../styles/navbar.css";
 import logo from "../media/shoe-logo.png";
 import { Link } from "react-router-dom";
-import Cart from "./Cart";
+import CartNav from "./CartNav";
 
-const Nav = ({ color , colorWhite , colorBlack , cartCount }) => {
+const Nav = ({ color , colorWhite , colorBlack , cartCount , openCart}) => {
 
   const style = { color: color };
 
@@ -22,7 +22,9 @@ const Nav = ({ color , colorWhite , colorBlack , cartCount }) => {
           <Link to="/shop" style={style} className="nav-item" onClick={colorBlack}>
             <li>Shop</li>
           </Link>
-          <Cart counter={cartCount}/>
+          <Link to="/cart" onClick={colorBlack}>
+            <CartNav counter={cartCount} openCart={openCart}/>
+          </Link>
         </ul>
       </div>
     </nav>

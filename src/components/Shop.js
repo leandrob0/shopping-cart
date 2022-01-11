@@ -1,5 +1,5 @@
 import "../styles/shop.css";
-import SingleItem from "./SingleItem";
+import SingleItemShop from "./SingleItemShop";
 
 const Shop = ({ imgs , plusCart }) => {
   return (
@@ -7,7 +7,7 @@ const Shop = ({ imgs , plusCart }) => {
       <div className="shop">
         <div className="items-container">
           {imgs.map((val) => {
-            return <SingleItem key={val.id} src={val.src} name={val.name} id={val.id} plusCart={plusCart}/>;
+            return <SingleItemShop key={val.id} src={val.src} name={val.name} price={val.price} id={val.id} plusCart={plusCart}/>;
           })}
         </div>
       </div>

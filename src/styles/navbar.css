@@ -52,7 +52,17 @@ ul#nav-list a.nav-item:hover {
     cursor: pointer;
 }
 
-.cart-container {
+/*
+#########################################
+#########################################
+
+    CART STYLING
+
+#########################################
+######################################### 
+*/
+
+.cart-nav-container {
     position: relative;
 
     background-color: rgb(202, 62, 62);
@@ -62,11 +72,20 @@ ul#nav-list a.nav-item:hover {
     margin-left: 2em;
 }
 
+.cart-nav-container:hover img {
+    cursor: pointer;
+
+    transform:skewY(-15deg);
+    transform:skewX(-15deg);
+}
+
 .cart-image {
     width: 40px;
     height: 40px;
 
     padding: 5px;
+
+    transition: ease-in-out .2s;
 }
 
 .cart-counter {
@@ -90,10 +109,6 @@ ul#nav-list a.nav-item:hover {
     animation: appear ease-in 1s;
 }
 
-/*
-use this class when the user adds an item to the cart.
-Set a timeout to remove it or remove it before using.
-*/
 @keyframes appear {
     0% {
         transform: scale(1.2);
