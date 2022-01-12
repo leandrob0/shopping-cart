@@ -26,13 +26,13 @@
   color: white;
 
   padding: 1em 2em;
-  box-shadow: 0.3em 0.3em 0 0 #19bc8b, inset 0.3em 0.3em 0 0 #19bc8b;
+  box-shadow: 0.3em 0.3em 0 0 rgb(202, 62, 62), inset 0.3em 0.3em 0 0 rgb(202, 62, 62);
   transition: .25s;
 }
 
 .button-catalog:hover {
     cursor: pointer;
     box-shadow: 
-    0 0 0 0 rgb(78, 199, 255),
-    inset 6em 3.5em 0 0 rgb(78, 199, 255);
+    0 0 0 0 rgb(245, 94, 94),
+    inset 6em 3.5em 0 0 rgb(245, 94, 94);
 }
