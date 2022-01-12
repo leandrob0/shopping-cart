@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.1cc605db.css",
-    "main.js": "/shopping-cart/static/js/main.b475b4b9.js",
+    "main.js": "/shopping-cart/static/js/main.fa17c0e2.js",
     "static/media/shoe-logo.png": "/shopping-cart/static/media/shoe-logo.bddc7d375593d377f0c6.png",
     "static/media/cart.png": "/shopping-cart/static/media/cart.4f1e25334f1ff23806cf.png",
     "static/media/adidasoriginals1.jpg": "/shopping-cart/static/media/adidasoriginals1.08524b163194091e9648.jpg",
     "static/media/adidas2.jpg": "/shopping-cart/static/media/adidas2.4b18d3cd3e60ca4df2b1.jpg",
     "index.html": "/shopping-cart/index.html",
     "main.1cc605db.css.map": "/shopping-cart/static/css/main.1cc605db.css.map",
-    "main.b475b4b9.js.map": "/shopping-cart/static/js/main.b475b4b9.js.map"
+    "main.fa17c0e2.js.map": "/shopping-cart/static/js/main.fa17c0e2.js.map"
   },
   "entrypoints": [
     "static/css/main.1cc605db.css",
-    "static/js/main.b475b4b9.js"
+    "static/js/main.fa17c0e2.js"
   ]
 }
