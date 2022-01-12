@@ -1,7 +1,7 @@
 import SingleItemCart from "./SingleItemCar";
 import "../styles/cart.css";
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart , decrement , increment }) => {
   return cart.length ? (
     <div className="visual-cart">
       <div className="cart-container">
@@ -11,6 +11,10 @@ const Cart = ({ cart }) => {
               src={val.src}
               name={val.name}
               price={val.price}
+              amount={val.amount}
+              decrement={decrement}
+              increment={increment}
+              id={val.id}
               key={val.id}
             />
           );

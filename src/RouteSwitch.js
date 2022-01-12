@@ -18,8 +18,8 @@ import useWindowDimensions from "./hooks/useWindowDimensions";
 
 /*
   THINGS TO ADD: 
-  -LET USER ADD MULTIPLE OF THE SAME AND SHOW IN CART AS ONE WITH THE QUANTITY OF SHOES FOR EACH SHOE ADDED.
-  -VISUALS TO CART
+  -ADD CHECKOUT BUTTON (DECORATION) AND MAYBE BUTTON TO GO TO SHOP (KEEP SHOPPING)
+  -FINISH VISUALS TO CART
  */
 
 const RouteSwitch = () => {
@@ -83,12 +83,46 @@ const RouteSwitch = () => {
     animate();
   };
   const animate = () => {
-    if(width < 650) return;
+    if (width < 650) return;
     const cartCount = document.querySelector(".cart-counter");
     if (cartCount.classList[1] === "animate")
       cartCount.classList.remove("animate");
     cartCount.classList.add("animate");
     setTimeout(() => cartCount.classList.remove("animate"), 1000);
+  };
+
+  const decrementItem = (e) => {
+    const id = e.target.classList[0];
+    const item = imgs.find((val) => val.id === Number(id));
+
+    const newCart = cart
+      .map((val) => {
+        if (val.id === Number(id)) {
+          val.price -= item.price;
+          val.amount -= 1;
+        }
+        return val;
+      })
+      .filter((val) => val.amount !== 0);
+
+    setAmountCart(amountCart - 1);
+    setCart(newCart);
+  };
+
+  const incrementItem = (e) => {
+    const id = e.target.classList[0];
+    const item = imgs.find((val) => val.id === Number(id));
+
+    const newCart = cart.map((val) => {
+      if (val.id === Number(id)) {
+        val.price += item.price;
+        val.amount += 1;
+      }
+      return val;
+    });
+
+    setAmountCart(amountCart + 1);
+    setCart(newCart);
   };
 
   return (
@@ -105,7 +139,16 @@ const RouteSwitch = () => {
           path="/shop"
           element={<Shop imgs={imgs} plusCart={addToCart} />}
         />
-        <Route path="/cart" element={<Cart cart={cart} />} />
+        <Route
+          path="/cart"
+          element={
+            <Cart
+              cart={cart}
+              decrement={decrementItem}
+              increment={incrementItem}
+            />
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

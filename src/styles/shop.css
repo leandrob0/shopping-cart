@@ -65,6 +65,11 @@
   transition: background-color 0.5s;
 }
 
+.add-to-cart:active {
+	background-color: rgb(241, 137, 137);
+  transition: .1s;
+}
+
 @media (min-width: 650px) {
   .add-to-cart:hover {
     cursor: pointer;

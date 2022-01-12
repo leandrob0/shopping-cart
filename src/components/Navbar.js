@@ -32,12 +32,7 @@ const List = ({ styleFont, colorWhite, colorBlack, cartCount }) => {
   );
 };
 
-const Hamburguer = ({
-  styleFont,
-  colorWhite,
-  colorBlack,
-  openCart
-}) => {
+const Hamburguer = ({ styleFont, colorWhite, colorBlack }) => {
   const setDisplay = () => {
     const dropdown = document.querySelector(".dropdown-content");
     dropdown.style.display === "none"
@@ -57,7 +52,7 @@ const Hamburguer = ({
           className="nav-item"
           onClick={colorWhite}
         >
-          <span>Home</span>
+          <span onClick={setDisplay}>Home</span>
         </Link>
         <Link
           to="/shop"
@@ -65,12 +60,10 @@ const Hamburguer = ({
           className="nav-item"
           onClick={colorBlack}
         >
-          <span>Shop</span>
+          <span onClick={setDisplay}>Shop</span>
         </Link>
         <Link to="/cart" onClick={colorBlack}>
-          <span>
-            Cart
-          </span>
+          <span onClick={setDisplay}>Cart</span>
         </Link>
       </div>
     </div>
