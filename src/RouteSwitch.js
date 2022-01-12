@@ -16,17 +16,14 @@ import converse from "./media/converse.jpg";
 import converse2 from "./media/converse2.jpg";
 import useWindowDimensions from "./hooks/useWindowDimensions";
 
-/*
-  THINGS TO ADD: 
-  -ADD CHECKOUT BUTTON (DECORATION) AND MAYBE BUTTON TO GO TO SHOP (KEEP SHOPPING)
-  -FINISH VISUALS TO CART
- */
 
 const RouteSwitch = () => {
   const [color, setColor] = useState();
   const [cart, setCart] = useState([]);
   const [amountCart, setAmountCart] = useState(0);
   const { width } = useWindowDimensions();
+
+  document.title = "Shoe shop";
 
   //makes sure if the page is reloaded the navbar colors on reload are accurate.
   useEffect(
