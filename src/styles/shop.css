@@ -16,6 +16,8 @@
 
   justify-content: center;
   align-items: center;
+
+  width: 100%;
 }
 
 .item {
@@ -60,10 +62,12 @@
   background-color: rgb(202, 62, 62);
   border: 0;
 
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
-.add-to-cart:hover {
-  cursor: pointer;
-  background-color: rgb(245, 94, 94);
+@media (min-width: 650px) {
+  .add-to-cart:hover {
+    cursor: pointer;
+    background-color: rgb(245, 94, 94);
+  }
 }

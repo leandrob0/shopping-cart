@@ -24,11 +24,6 @@
   padding-left: 20px;
 }
 
-.shoe-logo:hover {
-  cursor: pointer;
-  transform: translateY(-5px);
-}
-
 #nav-list {
   margin: 0;
   padding: 5px;
@@ -46,11 +41,6 @@ ul#nav-list a.nav-item {
 
   margin-left: 2em;
   margin-right: 2em;
-}
-
-ul#nav-list a.nav-item:hover {
-  transform: scale(1.1);
-  cursor: pointer;
 }
 
 /*
@@ -71,13 +61,6 @@ ul#nav-list a.nav-item:hover {
 
   margin-right: 20px;
   margin-left: 2em;
-}
-
-.cart-nav-container:hover img {
-  cursor: pointer;
-
-  transform: skewY(-15deg);
-  transform: skewX(-15deg);
 }
 
 .cart-image {
@@ -123,6 +106,7 @@ ul#nav-list a.nav-item:hover {
 }
 
 /* Style The Dropdown Button */
+/* Source: https://www.w3schools.com/css/css_dropdowns.asp*/
 .dropbtn {
   background-color: rgb(202, 62, 62);
   color: white;
@@ -163,17 +147,19 @@ a {
   text-decoration: none;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content Link:hover {
-  background-color: #f1f1f1;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: rgb(245, 94, 94);
+@media (min-width: 650px) {
+  .cart-nav-container:hover img {
+    cursor: pointer;
+  
+    transform: skewY(-15deg);
+    transform: skewX(-15deg);
+  }
+  ul#nav-list a.nav-item:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  .shoe-logo:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+  }
 }

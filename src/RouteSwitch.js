@@ -14,6 +14,7 @@ import adidasoriginals1 from "./media/adidasoriginals1.jpg";
 import adidasoriginalsnmd from "./media/adidasoriginalsnmd.jpg";
 import converse from "./media/converse.jpg";
 import converse2 from "./media/converse2.jpg";
+import useWindowDimensions from "./hooks/useWindowDimensions";
 
 /*
   THINGS TO ADD: 
@@ -25,6 +26,7 @@ const RouteSwitch = () => {
   const [color, setColor] = useState();
   const [cart, setCart] = useState([]);
   const [amountCart, setAmountCart] = useState(0);
+  const { width } = useWindowDimensions();
 
   useEffect(
     () =>
@@ -81,6 +83,7 @@ const RouteSwitch = () => {
     animate();
   };
   const animate = () => {
+    if(width < 650) return;
     const cartCount = document.querySelector(".cart-counter");
     if (cartCount.classList[1] === "animate")
       cartCount.classList.remove("animate");

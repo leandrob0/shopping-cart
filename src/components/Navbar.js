@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import CartNav from "./CartNav";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 
-const List = ({ styleFont, colorWhite, colorBlack, cartCount, openCart }) => {
+const List = ({ styleFont, colorWhite, colorBlack, cartCount }) => {
   return (
     <div className="list-container">
       <ul id="nav-list">
@@ -25,7 +25,7 @@ const List = ({ styleFont, colorWhite, colorBlack, cartCount, openCart }) => {
           <li>Shop</li>
         </Link>
         <Link to="/cart" onClick={colorBlack}>
-          <CartNav counter={cartCount} openCart={openCart} />
+          <CartNav counter={cartCount} />
         </Link>
       </ul>
     </div>
@@ -36,8 +36,7 @@ const Hamburguer = ({
   styleFont,
   colorWhite,
   colorBlack,
-  cartCount,
-  openCart,
+  openCart
 }) => {
   const setDisplay = () => {
     const dropdown = document.querySelector(".dropdown-content");
@@ -47,11 +46,11 @@ const Hamburguer = ({
   };
 
   return (
-    <div class="dropdown">
-      <button class="dropbtn" onClick={setDisplay} type="button">
+    <div className="dropdown">
+      <button className="dropbtn" onClick={setDisplay} type="button">
         Menu
       </button>
-      <div class="dropdown-content">
+      <div className="dropdown-content">
         <Link
           to="/"
           style={styleFont}
@@ -69,7 +68,7 @@ const Hamburguer = ({
           <span>Shop</span>
         </Link>
         <Link to="/cart" onClick={colorBlack}>
-          <span counter={cartCount} openCart={openCart}>
+          <span>
             Cart
           </span>
         </Link>
@@ -78,7 +77,7 @@ const Hamburguer = ({
   );
 };
 
-const Nav = ({ color, colorWhite, colorBlack, cartCount, openCart }) => {
+const Nav = ({ color, colorWhite, colorBlack, cartCount }) => {
   const { width } = useWindowDimensions();
 
   const styleFont = { color: color };
@@ -99,15 +98,12 @@ const Nav = ({ color, colorWhite, colorBlack, cartCount, openCart }) => {
           colorWhite={colorWhite}
           colorBlack={colorBlack}
           cartCount={cartCount}
-          openCart={openCart}
         />
       ) : (
         <Hamburguer
           styleFont={styleFont}
           colorWhite={colorWhite}
           colorBlack={colorBlack}
-          cartCount={cartCount}
-          openCart={openCart}
         />
       )}
     </nav>
