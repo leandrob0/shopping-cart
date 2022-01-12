@@ -1,7 +1,19 @@
 import SingleItemCart from "./SingleItemCar";
 import "../styles/cart.css";
+import { Link } from "react-router-dom";
 
-const Cart = ({ cart , decrement , increment }) => {
+const ButtonsCart = () => {
+  return (
+    <div className="buttons-cart">
+      <button type="button" onClick={() => console.log('Functionality not added :)')}>CHECKOUT</button>
+      <Link to="/shop">
+        <button type="button">CONTINUE SHOPPING</button>
+      </Link>
+    </div>
+  );
+};
+
+const Cart = ({ cart, decrement, increment }) => {
   return cart.length ? (
     <div className="visual-cart">
       <div className="cart-container">
@@ -19,15 +31,14 @@ const Cart = ({ cart , decrement , increment }) => {
             />
           );
         })}
+        <ButtonsCart/>
       </div>
     </div>
   ) : (
     <div className="empty-container">
       <div className="outer">
         <div className="inner">
-          <div className="text">
-            THE CART IS EMPTY :(
-          </div>
+          <div className="text">THE CART IS EMPTY :(</div>
         </div>
       </div>
     </div>

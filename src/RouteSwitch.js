@@ -28,9 +28,14 @@ const RouteSwitch = () => {
   const [amountCart, setAmountCart] = useState(0);
   const { width } = useWindowDimensions();
 
+  //makes sure if the page is reloaded the navbar colors on reload are accurate.
   useEffect(
     () =>
-      document.querySelector(".shop") ? setColor("black") : setColor("white"),
+      document.querySelector(".shop") ||
+      document.querySelector(".visual-cart") ||
+      document.querySelector(".empty-container")
+        ? setColor("black")
+        : setColor("white"),
     []
   );
 

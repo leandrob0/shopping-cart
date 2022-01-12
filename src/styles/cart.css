@@ -70,22 +70,59 @@
 }
 
 .black-text {
-    margin-left: 10px;
     word-wrap: break-word;
+    margin-right: 30px;
 }
 
 .price-container {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
 
     width: 30%;
 }
 
 .change-amount-item {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.amount-items-cart {
+    padding: 10px;
+}
+
+.change-amount-item button {
+    height: 25px;
+    width: 25px;
 
     text-align: center;
+    font-weight: bold;
+
+    background-color: rgb(202, 62, 62);
+    border: 0;
+}
+
+.buttons-cart {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    margin-top: 30px;
+}
+
+.buttons-cart button {
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    background-color: rgb(202, 62, 62);
+    border: 0;
+}
+
+@media (min-width: 650px) {
+    button:hover {
+        cursor: pointer;
+        background-color: rgb(245, 94, 94);;
+        transition: background-color .2s;
+    }
 }
