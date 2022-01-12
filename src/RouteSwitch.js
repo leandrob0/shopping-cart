@@ -129,13 +129,13 @@ const RouteSwitch = () => {
         cartCount={amountCart}
       />
       <Routes>
-        <Route path="/" element={<Homepage colorBlack={colorBlack} />} />
+        <Route path="/shopping-cart/" element={<Homepage colorBlack={colorBlack} />} />
         <Route
-          path="/shop"
+          path="/shopping-cart/shop"
           element={<Shop imgs={imgs} plusCart={addToCart} />}
         />
         <Route
-          path="/cart"
+          path="/shopping-cart/cart"
           element={
             <Cart
               cart={cart}
