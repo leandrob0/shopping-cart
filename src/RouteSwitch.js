@@ -16,7 +16,6 @@ import converse from "./media/converse.jpg";
 import converse2 from "./media/converse2.jpg";
 import useWindowDimensions from "./hooks/useWindowDimensions";
 
-
 const RouteSwitch = () => {
   const [color, setColor] = useState();
   const [cart, setCart] = useState([]);
@@ -26,16 +25,11 @@ const RouteSwitch = () => {
   document.title = "Shoe shop";
 
   //makes sure if the page is reloaded the navbar colors on reload are accurate.
-  useEffect(
-    () =>
-      document.querySelector(".shop") ||
-      document.querySelector(".visual-cart") ||
-      document.querySelector(".empty-container")
-        ? setColor("black")
-        : setColor("white"),
-    []
-  );
-
+  useEffect(() => {
+    document.querySelector(".homepage-background")
+      ? setColor("white")
+      : setColor("black");
+  }, []);
   const imgs = [
     { src: adidas1, name: "Adidas Breaknet", price: 60, id: 1 },
     { src: adidas2, name: "Adidas FluidStreet", price: 37, id: 2 },
