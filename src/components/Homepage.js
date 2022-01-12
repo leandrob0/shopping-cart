@@ -6,7 +6,7 @@ const Homepage = ({ colorBlack }) => {
   return (
     <>
       <div className="homepage-background">
-        <Link to="/shop" onClick={colorBlack}>
+        <Link to="/shopping-cart/shop" onClick={colorBlack}>
           <button type="button" className="button-catalog">
             View catalog
           </button>

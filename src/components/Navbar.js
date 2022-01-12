@@ -9,7 +9,7 @@ const List = ({ styleFont, colorWhite, colorBlack, cartCount }) => {
     <div className="list-container">
       <ul id="nav-list">
         <Link
-          to="/"
+          to="/shopping-cart/"
           style={styleFont}
           className="nav-item"
           onClick={colorWhite}
@@ -17,14 +17,14 @@ const List = ({ styleFont, colorWhite, colorBlack, cartCount }) => {
           <li>Home</li>
         </Link>
         <Link
-          to="/shop"
+          to="/shopping-cart/shop"
           style={styleFont}
           className="nav-item"
           onClick={colorBlack}
         >
           <li>Shop</li>
         </Link>
-        <Link to="/cart" onClick={colorBlack}>
+        <Link to="/shopping-cart/cart" onClick={colorBlack}>
           <CartNav counter={cartCount} />
         </Link>
       </ul>
@@ -47,7 +47,7 @@ const Hamburguer = ({ styleFont, colorWhite, colorBlack }) => {
       </button>
       <div className="dropdown-content">
         <Link
-          to="/"
+          to="/shopping-cart/"
           style={styleFont}
           className="nav-item"
           onClick={colorWhite}
@@ -55,14 +55,14 @@ const Hamburguer = ({ styleFont, colorWhite, colorBlack }) => {
           <span onClick={setDisplay}>Home</span>
         </Link>
         <Link
-          to="/shop"
+          to="/shopping-cart/shop"
           style={styleFont}
           className="nav-item"
           onClick={colorBlack}
         >
           <span onClick={setDisplay}>Shop</span>
         </Link>
-        <Link to="/cart" onClick={colorBlack}>
+        <Link to="/shopping-cart/cart" onClick={colorBlack}>
           <span onClick={setDisplay}>Cart</span>
         </Link>
       </div>
@@ -81,7 +81,7 @@ const Nav = ({ color, colorWhite, colorBlack, cartCount }) => {
   return (
     <nav id="nav" style={styleNav}>
       <div className="logo">
-        <Link to="/" onClick={colorWhite}>
+        <Link to="/shopping-cart/" onClick={colorWhite}>
           <img alt="shoe-logo" src={logo} className="shoe-logo" />
         </Link>
       </div>
