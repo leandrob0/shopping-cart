@@ -1,6 +1,6 @@
 # Shopping cart!
 
-In this page you will find a small shop to buy shoes, this page will allow you to watch different shoes and add them to a shopping cart.
+In this page you will find a small shoe shop, this page will allow you to watch different shoes and add them to a shopping cart.
 
 # About 
 
