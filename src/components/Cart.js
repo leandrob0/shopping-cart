@@ -6,7 +6,7 @@ const ButtonsCart = () => {
   return (
     <div className="buttons-cart">
       <button type="button" onClick={() => console.log('Functionality not added :)')}>CHECKOUT</button>
-      <Link to="/shop">
+      <Link to="/shopping-cart/shop">
         <button type="button">CONTINUE SHOPPING</button>
       </Link>
     </div>
